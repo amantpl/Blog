@@ -13,6 +13,7 @@ const backgroundImages = [
     "url('img/b12.png')"
 ];
 
+
 const main = document.getElementById('main');
 
 function changeBackgroundImage() {
@@ -27,3 +28,41 @@ function changeBackgroundImage() {
 // Set the initial background image when the website loads
 changeBackgroundImage();
 setInterval(changeBackgroundImage, 5000);
+
+const navLinks = document.querySelectorAll('.nav-link');
+
+// Function to remove 'active' from all links and add it to the clicked one
+function setActiveLink(event) {
+    // Remove 'active' from all links
+    navLinks.forEach(link => link.classList.remove('active'));
+    // Add 'active' to the clicked link
+    event.currentTarget.classList.add('active');
+}
+
+// Attach event listeners to each link
+navLinks.forEach(link => {
+    link.addEventListener('click', setActiveLink);
+});
+
+
+let scrollcontainer=document.querySelector(`.post-wrapper`);
+let backbtn=document.querySelector(`.prev`);
+let nextbtn=document.querySelector(`.next`);
+
+
+scrollcontainer.addEventListener(`wheel`,(event)=>{
+    event.preventDefault();
+    scrollcontainer.scrollLeft+=event.deltaY;
+    scrollcontainer.style.scrollBehavior=`auto`;
+
+})
+
+nextbtn.addEventListener(`click`,()=>{
+    scrollcontainer.style.scrollBehavior=`smooth`;
+    scrollcontainer.scrollLeft+=scrollcontainer.offsetWidth;
+});
+
+backbtn.addEventListener(`click`,()=>{
+    scrollcontainer.style.scrollBehavior=`smooth`;
+    scrollcontainer.scrollLeft-=scrollcontainer.offsetWidth;
+});

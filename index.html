@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Devlog</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
 </head>
 <body>
+    <div id="top"></div>
 
     <div id="main">
         <section id="header">
@@ -14,10 +17,10 @@
                 <a href="#" class="logo"><img src="./img/logo3.png" alt="Devlog Logo"></a>
                 <nav>
                     <ul id="navbar">
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#blogs">Blogs</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contacts">Contacts</a></li>
+                        <li><a href="#top" class="nav-link">Home</a></li>
+                        <li><a href="#blogs" class="nav-link">Blogs</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#contacts" class="nav-link">Contacts</a></li>
                         <li><a href="" class="btn">Create Your Blog</a></li>
                     </ul>
                 </nav>
@@ -38,11 +41,102 @@
 
 
 
-
     <section id="blogs">
-        <h2>Blogs</h2>
-        <p>this is the blog section</p>
+        <div class="blog-section">
+            <h2>Trending Now</h2>
+
+            <div class="post-slider">
+                <h2 class="slider-title">Posts</h2>
+                <button class="prev">&#10094;</button>
+
+                <div class="post-wrapper">
+
+                    <div class="blog-card">
+                        <img src="./img/a1.png" alt="Post Image" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Unlocking the Future: The Power of Artificial Intelligence</h3>
+                            <p class="card-date">5 JAN 2025</p>
+                            <p class="card-description">AI allows machines to mimic human intelligence, enabling them to learn and make decisions, improving automation and efficiency.</p>
+                            <div class="card-author">
+                                <img src="./img/author1.png" alt="Author Image" class="author-image">
+                                <p class="author-name">Rohit Negi</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- You can add more blog cards here -->
+                    <div class="blog-card">
+                        <img src="./img/a2.png" alt="Post Image" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">The Rise of TikTok Ads: A Game-Changer for Digital Marketing</h3>
+                            <p class="card-date">6 JAN 2025</p>
+                            <p class="card-description">TikTok ads are growing rapidly, tapping into a young, engaged audience. Brands are using creative formats for better engagement.</p>
+                            <div class="card-author">
+                                <img src="./img/author2.png" alt="Author Image" class="author-image">
+                                <p class="author-name">Ethan Harper</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <img src="./img/a3.png" alt="Post Image" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">AI Code Assistants: Revolutionizing Software Development</h3>
+                            <p class="card-date">7 JAN 2025</p>
+                            <p class="card-description">AI assistants help developers write, debug, and optimize code. They save time and improve code quality.</p>
+                            <div class="card-author">
+                                <img src="./img/author3.png" alt="Author Image" class="author-image">
+                                <p class="author-name">Olivia Walker</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <img src="./img/a4.png" alt="Post Image" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">CBG Gummies: The New Wellness Trend for Stress Relief</h3>
+                            <p class="card-date">8 JAN 2025</p>
+                            <p class="card-description">CBG gummies are becoming popular for stress relief and focus. They offer a natural alternative with minimal side effects.</p>
+                            <div class="card-author">
+                                <img src="./img/author4.png" alt="Author Image" class="author-image">
+                                <p class="author-name">Mason Bennett</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <img src="./img/a5.png" alt="Post Image" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Bamboo Pajamas: The Sustainable Fashion Revolution</h3>
+                            <p class="card-date">9 JAN 2025</p>
+                            <p class="card-description">Bamboo pajamas are soft, breathable, and eco-friendly. They're a sustainable alternative for comfortable sleepwear.</p>
+                            <div class="card-author">
+                                <img src="./img/auhtor5.png" alt="Author Image" class="author-image">
+                                <p class="author-name">Ava Mitchell</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="blog-card">
+                        <img src="./img/a6.png" alt="Post Image" class="card-image">
+                        <div class="card-content">
+                            <h3 class="card-title">Claude AI: The Future of Conversational AI Technology</h3>
+                            <p class="card-date">14 JAN 2025</p>
+                            <p class="card-description">Claude AI offers human-like conversations and accurate text generation. It's pushing the boundaries of AI-driven communication.</p>
+                            <div class="card-author">
+                                <img src="./img/author6.png" alt="Author Image" class="author-image">
+                                <p class="author-name">Lucas Carter</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="next">&#10095;</button>
+
+
+                </div>
+            </div>
+        </div>
     </section>
+    
 
     <!-- About Section -->
     <section id="about">
@@ -55,6 +149,7 @@
         <h2>Contacts</h2>
         <p>This is the Contacts section.</p>
     </section>
+
 
     <script src="first.js"></script>
 </body>
