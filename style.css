@@ -2,12 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
 html {
     scroll-behavior: smooth;
 }
@@ -30,7 +24,7 @@ body {
     z-index: 1000;
     width: 100%;
     background: transparent;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
     height: 100px;
 }
@@ -52,14 +46,14 @@ body {
 }
 
 .logo img:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
+    transform: scale(1.1);
 }
 
 /* Navbar */
 #navbar {
     list-style: none;
     display: flex;
-    gap: 30px; /* Increased gap for better spacing */
+    gap: 30px;
     margin: 0;
     padding: 0;
 }
@@ -70,17 +64,17 @@ body {
 
 #navbar a {
     text-decoration: none;
-    color: black; /* Light White */
-    font-size: 18px; /* Slightly larger font size */
-    padding: 12px 18px; /* Adjusted padding */
+    color: black;
+    font-size: 18px;
+    padding: 12px 18px;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 #navbar a:hover {
-    background-color: #64748b; /* Light Navy */
-    color: #f1f5f9; /* Lighter White */
-    transform: scale(1.1); /* Slight scale effect on hover */
+    background-color: #64748b;
+    color: #f1f5f9;
+    transform: scale(1.1);
 }
 
 /* Button Link */
@@ -130,23 +124,22 @@ body {
 }
 
 .nav-link.active {
-    color: #007BFF; /* Change to your preferred active color */
-    font-weight: bold; /* Optional: Make it bold */
-    text-decoration: underline; /* Optional: Add an underline */
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 #second {
-    height: calc(100vh - 140px); /* Adjust height to account for header */
+    height: calc(100vh - 140px);
     width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-#main{
+#main {
     transition: background-image 1s ease-in-out;
 }
-
 
 .blog-section {
     background-image: url("./img/a1back.png");
@@ -154,7 +147,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
-    padding-top: 50px; /* Adjusted to ensure content is not cramped */
+    padding-top: 50px;
 }
 
 .blog-section h2 {
@@ -191,8 +184,6 @@ body {
     transition: transform 0.5s ease-in-out;
 }
 
-
-
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -218,10 +209,9 @@ body {
     font-weight: 600;
     margin-top: -20px;
     color: #fff;
-
 }
 
-.post-slider{
+.post-slider {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,19 +227,8 @@ body {
 }
 
 .post-wrapper::-webkit-scrollbar {
-    display: none; 
+    display: none;
 }
-
-
-
-/* .blog-card:nth-child(n+4) {
-    display: none; 
-} */
-
-/* When the user scrolls horizontally, the hidden cards will be revealed */
-/* .post-wrapper:hover .blog-card:nth-child(n+4) {
-    display: inline-block;
-} */
 
 .blog-card {
     min-width: 350px;
@@ -323,17 +302,111 @@ body {
     font-weight: 500;
 }
 
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Responsive Styles */
+@media (max-width: 1200px) {
     .container {
-        flex-direction: column;
-        align-items: center;
+        padding: 0 15px;
     }
 
+    .post-wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .heading {
+        padding: 80px 20px;
+    }
+
+    .heading #write h1 {
+        font-size: 35px;
+    }
+
+    .heading #button button {
+        padding: 12px 18px;
+        font-size: 14px;
+    }
+
+    .blog-section h2 {
+        font-size: 3rem;
+    }
+
+    .slider-title {
+        font-size: 1.8rem;
+    }
+
+    .post-wrapper {
+        gap: 15px;
+    }
+
+    .blog-card {
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
     #navbar {
         flex-direction: column;
+        gap: 15px;
+    }
+
+    .heading {
+        padding: 60px 15px;
+    }
+
+    .heading #write h1 {
+        font-size: 30px;
+    }
+
+    .heading #button button {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .blog-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .slider-title {
+        font-size: 1.5rem;
+    }
+
+    .post-wrapper {
         gap: 10px;
+    }
+
+    .blog-card {
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .heading {
+        padding: 40px 10px;
+    }
+
+    .heading #write h1 {
+        font-size: 25px;
+    }
+
+    .heading #button button {
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+    .blog-section h2 {
+        font-size: 2rem;
+    }
+
+    .slider-title {
+        font-size: 1.2rem;
+    }
+
+    .post-wrapper {
+        gap: 5px;
+    }
+
+    .blog-card {
+        min-width: 200px;
     }
 }
