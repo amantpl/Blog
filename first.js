@@ -66,3 +66,25 @@ backbtn.addEventListener(`click`,()=>{
     scrollcontainer.style.scrollBehavior=`smooth`;
     scrollcontainer.scrollLeft-=scrollcontainer.offsetWidth;
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var bar = document.getElementById("bar");
+    var navbar = document.getElementById("navbar");
+    var close = document.getElementById("close");
+
+    if (bar) {
+        bar.addEventListener("click", function () {
+            navbar.classList.add("active"); // Show the navigation
+            bar.style.display = 'none'; // Hide the hamburger menu
+        });
+    }
+
+    if (close) {
+        close.addEventListener("click", function () {
+            navbar.classList.remove("active"); // Hide the navigation
+            bar.style.display = 'block'; // Show the hamburger menu
+        });
+    }
+});
+

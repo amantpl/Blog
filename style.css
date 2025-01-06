@@ -58,6 +58,10 @@ body {
     padding: 0;
 }
 
+#navbar.active {
+    right: 0; /* Slide the navbar into view */
+}
+
 #navbar li {
     display: inline-block;
 }
@@ -91,6 +95,7 @@ body {
     font-weight: 600;
     background-color: #3498db;
 }
+
 
 .heading {
     display: flex;
@@ -301,6 +306,180 @@ body {
     color: #333;
     font-weight: 500;
 }
+.section-p1 {
+    padding: 60px 100px;
+    background: #f4f4f4;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #333; /* Dark gray background */
+    color: #fff; /* White text for contrast */
+    padding: 40px 80px;
+    border-top: 4px solid #088178; /* Optional: Add a stylish top border */
+
+}
+
+
+footer .col {
+    flex: 1;
+    min-width: 220px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+footer .col:hover {
+    transform: translateY(-5px);
+}
+
+footer .logo {
+    margin-bottom: 20px;
+}
+
+footer h4 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+footer h4::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #088178;
+    margin-top: 5px;
+}
+
+footer p,
+footer a {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #555;
+}
+
+footer a {
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #088178;
+}
+
+footer .follow {
+    margin-top: 20px;
+}
+
+footer .follow i {
+    color: #555;
+    font-size: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .follow i:hover {
+    color: #088178;
+    transform: scale(1.2);
+}
+
+footer .install .row img {
+    border: 2px solid #088178;
+    border-radius: 8px;
+    width: 120px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+footer .install img:hover {
+    transform: scale(1.05);
+}
+
+footer .copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+    font-size: 20px;
+}
+
+#footerlogo {
+    height: 120px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#footerlogo:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer .copyright p{
+    font-size: 20px;
+
+}
+
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+
+@media (max-width: 872px) {
+    #mobile {
+        display: flex;
+        justify-content: end;
+        padding-right: 20px;
+        font-size: 35px; 
+        cursor: pointer;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        color: black; /* Bright red color for high visibility */
+    }
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background-color: #E3E6F3;
+        box-shadow: 0px 40px 60px rgba(0,0,0,0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+
+    }
+
+    #navbar.active{
+        right: 0;
+    }
+    #close{
+        display: initial;
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #close .far{
+        font-size: 24px;
+    }
+}
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
@@ -409,6 +588,43 @@ body {
 
     .blog-card {
         min-width: 200px;
+        height: auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
+
+    .card-image {
+        height: 100px;
+    }
+
+    .card-content {
+        padding: 8px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .card-description {
+        font-size: 12px;
+    }
+
+    .card-author {
+        font-size: 12px;
+    }
+
+    .author-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+
 }
 
