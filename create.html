@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devlog: Posts</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"rel="stylesheet"/>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><img src="./img/logo3.png" alt=""></a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Your Post...">
+        </div>
+        <div class="nav-buttons">
+            <a href="index.html" class="home-link">Home</a>
+            <button class="new-post">New Post</button>
+        </div>
+    </header>
+
+
+        <div class="no-post">
+            <img src="./img/nopost.png" alt="">
+            <h1>No Posts Yet</h1>
+        </div>
+
+        <div class="editor-container hidden">
+            <div class="title-section">
+                <label for="editor-title">Enter Title:</label>
+                <input type="text" id="editor-title" placeholder="Enter the title" />
+                <button id="nextStep" onclick="showEditor()">Next</button>
+            </div>
+        
+            <div class="editor-section" style="display: none;">
+                <div class="title">
+                    <h2 id="display-title"></h2>
+                </div>
+        
+                <div class="editor-toolbar">
+                    <!-- Other toolbar buttons -->
+        
+                    <button id="bold" class="toolbar-button format">
+                        <i class="fa-solid fa-bold"></i>
+                    </button>
+                    <button id="italic" class="toolbar-button format">
+                        <i class="fa-solid fa-italic"></i>
+                    </button>
+                    <button id="underline" class="toolbar-button format">
+                        <i class="fa-solid fa-underline"></i>
+                    </button>
+                    <button id="strikethrough" class="toolbar-button format">
+                        <i class="fa-solid fa-strikethrough"></i>
+                    </button>
+                    <button id="superscript" class="toolbar-button script">
+                        <i class="fa-solid fa-superscript"></i>
+                    </button>
+                    <button id="subscript" class="toolbar-button script">
+                        <i class="fa-solid fa-subscript"></i>
+                    </button>
+                    <button id="insertOrderedList" class="toolbar-button">
+                        <i class="fa-solid fa-list-ol"></i>
+                    </button>
+                    <button id="insertUnorderedList" class="toolbar-button">
+                        <i class="fa-solid fa-list"></i>
+                    </button>
+                    <button id="undo" class="toolbar-button">
+                        <i class="fa-solid fa-rotate-left"></i>
+                    </button>
+                    <button id="redo" class="toolbar-button">
+                        <i class="fa-solid fa-rotate-right"></i>
+                    </button>
+                    <button id="justifyLeft" class="toolbar-button align">
+                        <i class="fa-solid fa-align-left"></i>
+                    </button>
+                    <button id="justifyCenter" class="toolbar-button align">
+                        <i class="fa-solid fa-align-center"></i>
+                    </button>
+                    <button id="justifyRight" class="toolbar-button align">
+                        <i class="fa-solid fa-align-right"></i>
+                    </button>
+                    <button id="justifyFull" class="toolbar-button align">
+                        <i class="fa-solid fa-align-justify"></i>
+                    </button>
+                    <button id="indent" class="toolbar-button spacing">
+                        <i class="fa-solid fa-indent"></i>
+                    </button>
+                    <button id="outdent" class="toolbar-button spacing">
+                        <i class="fa-solid fa-outdent"></i>
+                    </button>
+                    <select id="formatBlock" class="toolbar-button advanced">
+                        <option value="H1">H1</option>
+                        <option value="H2">H2</option>
+                        <option value="H3">H3</option>
+                        <option value="H4">H4</option>
+                        <option value="H5">H5</option>
+                        <option value="H6">H6</option>
+                    </select>
+                    <select id="fontName" class="toolbar-button advanced"></select>
+                    <select id="fontSize" class="toolbar-button advanced"></select>
+                    <div class="color-picker">
+                        <input type="color" id="foreColor" class="adv-option-button" />
+                        <label for="foreColor"><i class="fa-solid fa-palette"></i> Font</label>
+                    </div>
+                    <div class="color-picker">
+                        <input type="color" id="backColor" class="adv-option-button" />
+                        <label for="backColor"><i class="fa-solid fa-palette"></i> Highl</label>
+                    </div>
+                    
+                    <!-- Text-to-Speech Button -->
+                    <button id="textToSpeech" class="toolbar-button">
+                        <i class="fa-solid fa-volume-high"></i> Speak
+                    </button>
+        
+
+                </div>
+        
+                <div id="text-input" class="editable-area" contenteditable="true"></div>
+
+                <div class="saveandclear">
+                    <button id="save" class="toolbar-button">
+                        <i class="fa-solid fa-save"></i> Save
+                    </button>
+
+                    <button id="close" class="toolbar-button">
+                        <i class="fa-solid fa-xmark"></i> Close
+                    </button>
+                            
+                    <button id="clear" class="toolbar-button">
+                        <i class="fa-solid fa-eraser"></i> Clear
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        
+          
+          
+        
+          
+          <script src="second.js"></script>
+</body>
+</html>

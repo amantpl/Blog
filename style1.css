@@ -1,0 +1,343 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+    line-height: 1.6;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    padding: 20px 40px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #ffffff;
+}
+
+.logo img {
+    height: 50px; /* Adjust the height of the logo */
+    width: auto;
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+}
+
+.logo:hover img {
+    transform: scale(1.1);
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 40px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 17px;
+    color: #333;
+    background-color: #fff;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    border: 2px solid #00c6ff;
+    outline: none;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-buttons a {
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    background-color: #fff;
+    color: #007bff;
+    font-size: 17px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-buttons a:hover {
+    background-color: #007bff;
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.home-link {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    margin-left: 15px;
+}
+
+.home-link:hover {
+    background-color: #fff;
+    color: #007bff;
+    transform: translateY(-3px);
+}
+
+.new-post {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.new-post:hover {
+    background-color: #005bb5;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.no-post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+}
+
+.no-post img {
+    height: 100px;
+    width: auto;
+}
+
+
+/* text editor */
+/* Editor container */
+.editor-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #f9f9f9, #eef2f3);
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+/* Toolbar styling */
+.editor-toolbar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+    align-items: center;
+    justify-items: center;
+}
+  
+.toolbar-button {
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.toolbar-button:hover {
+    background: #f0f8ff;
+    border-color: #007bff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+  
+.toolbar-button:active {
+    background: #cce7ff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+  
+.color-picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.color-picker input {
+    margin: 5px 0;
+    border-radius: 8px;
+}
+  
+.color-picker label {
+    font-size: 14px;
+    color: #666;
+}
+  
+/* Select dropdown styling */
+.advanced {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff;
+    border: 2px solid #ddd;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+  
+.advanced:hover {
+    background: #f0f8ff;
+    border-color: #007bff;
+}
+  
+/* Editable text area */
+.editable-area {
+    min-height: 350px;
+    padding: 25px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+  
+.editable-area:focus {
+    border-color: #007bff;
+}
+  
+.editable-area:empty:before {
+    content: 'Start typing here...';
+    color: #bbb;
+    font-style: italic;
+}
+
+#textToSpeech{
+    margin-left: 30px;
+    margin-bottom: 25px;
+}
+  
+
+/* Title Input Section */
+.title-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .title-section label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .title-section input {
+    padding: 8px;
+    font-size: 16px;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .title-section button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .title-section button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Text Editor Section (Initially Hidden) */
+  .editor-section {
+    display: none;
+  }
+  
+  .editor-section .title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .editor-section .title h2 {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .saveandclear{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #save{
+    background-color: #45a049;
+  }
+
+  #clear{
+    background-color: #f44336;
+  }
+
+  #close{
+    background-color: gray;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+  .post {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: #f9f9f9;
+}
+
+.post h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.post div {
+    color: #555;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .search-bar {
+        margin: 20px 0;
+    }
+
+    .nav-buttons {
+        gap: 20px;
+        flex-direction: column;
+    }
+}
